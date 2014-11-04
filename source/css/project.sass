@@ -1,0 +1,672 @@
+@import "compass"
+
+@import "variables"
+@import "fonts/roboto/roboto"
+@import "sticky-footer"
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-family: 'roboto_cnbold'
+	font-stretch: 0.9
+	text-transform: uppercase
+	color: $black-head
+h1
+	font-size: 32px
+h2
+	font-size: 28px
+h3
+	font-size: 22px
+h4
+	font-size: 19px
+h5
+	font-size: 17px
+h6
+	font-size: 15px
+p
+	margin: 0
+	font-family: 'robotoregular'
+a
+	text-decoration: underline
+	&:hover, &:focus
+		text-decoration: none
+		outline: none
+.btn
+	padding: 6px 15px
+.btn, button
+	&:focus
+		outline: none
+.btn-black
+	text-transform: uppercase
+	padding: 7px 25px
+	font-family: 'robotobold'
+	background: #000
+	color: #fff
+	&:hover
+		background: #202020
+		color: #fff
+.btn-orange
+	background: $orange
+	color: #fff
+	text-transform: uppercase
+	padding: 10px 25px
+	font-family: 'robotobold'
+	&:hover
+		background: #f57e20
+		color: #fff
+.title-underline
+	width: 9px
+	height: 9px
+	border: 1px solid #999
+	margin: 12px auto
+	&:after, &:before
+		width: 50px
+		height: 1px
+		content: ''
+		display: block
+		border-top: 1px solid #999
+		position: relative
+	&:before
+		top: 4px
+		right: 50px
+	&:after
+		top: 3px
+		left: 9px
+.btn-scroll
+	display: none
+	background: #000
+	position: fixed
+	bottom: 60px
+	right: 40px
+	width: 45px
+	height: 45px
+	border: none
+	cursor: pointer
+	z-index: 1000
+	&:before
+		content: '' 
+		position: absolute
+		bottom: 20px
+		left: 12px
+		border: 10px solid transparent
+		border-bottom: 10px solid #fff
+	&:after
+		content: '' 
+		position: absolute
+		bottom: 18px
+		left: 12px
+		border: 10px solid transparent
+		border-bottom: 10px solid #000
+.btn-phone
+	position: fixed
+	bottom: 300px
+	right: 40px
+	width: 60px
+	background: #9fbee3
+	height: 60px
+	+border-radius(30px)
+	border: none
+	z-index: 1000
+	&:before
+		content: ''
+		width: 90px
+		height: 90px
+		position: absolute
+		top: -15px
+		right: -15px
+		+border-radius(45px)
+		opacity: 0.6
+		background: #9fbee3
+	&:after
+		content: ''
+		background: url('../img/phone-white.png') no-repeat
+		position: absolute
+		top: 16px
+		right: 5px
+		width: 40px
+		height: 40px
+.btn-consult
+	background: url('../img/online-consult.jpg') no-repeat
+	position: fixed
+	left: 0
+	bottom: 115px
+	width: 36px
+	height: 166px
+	border: none
+	+border-radius(0 6px 6px 0)
+	z-index: 1000
+.btn-close
+	border: none
+	margin-bottom: 20px
+	position: relative
+	width: 40px
+	height: 40px
+	&:after
+		content: '' 
+		position: absolute
+		bottom: 20px
+		left: 5px
+		width: 30px
+		border-top: 1px solid #fff
+		+transform(rotate(45deg))
+	&:before
+		content: '' 
+		position: absolute
+		bottom: 20px
+		left: 5px
+		width: 30px
+		border-top: 1px solid #fff
+		+transform(rotate(-45deg))
+.white
+	color: #fff !important
+.nowrap
+	white-space: nowrap
+
+body
+	background: #fff
+	color: $black
+	font-family: 'roboto_cnregular'
+	.container
+		width: 1162px
+		max-width: 1162px
+		min-width: 1162px
+.header
+	border-bottom: 3px solid $orange
+	position: fixed
+	top: 0
+	z-index: 1000
+	width: 100%
+	background: #fff
+	font-family: 'roboto_cnregular'
+	.header-logo
+		margin-right: 140px
+		margin-left: -6px
+	.header-navigation
+		margin-top: 15px
+		.btn.pull-right
+			background: #e1e1e1
+			&:hover
+				background: #d1d1d1
+		.phone
+			margin-right: 17px
+			margin-top: 8px
+			font-weight: bold
+			&:before
+				content: url('../img/phone.png')
+				font-weight: bold
+				margin-right: 3px
+		.header-menu
+			a
+				position: relative
+				color: $black
+				display: inline-block
+				text-decoration: none
+				margin-right: 27px
+				padding: 5px 0
+				text-transform: uppercase
+				font-size: 15px
+				&:after, &:before
+					position: absolute
+					background: $orange
+					top: 100%
+					left: 0
+					content: ''
+					width: 100%
+					height: 1px
+					opacity: 0
+					transition: opacity 0.3s, transform 0.3s
+					-moz-transition: opacity 0.3s, -moz-transform 0.3s
+					-webkit-transition: opacity 0.3s, -webkit-transform 0.3s
+					-o-transition: opacity 0.3s, -o-transform 0.3s
+					transform: translateY(-5px)
+					-moz-transform: translateY(-5px)
+					-webkit-transform: translateY(-5px)
+					-o-transform: translateY(-5px)
+				&:before
+					top: 0
+					transform: translateY(5px)
+					-moz-transform: translateY(5px)
+					-webkit-transform: translateY(5px)
+					-o-transform: translateY(5px)
+				&:hover, &:focus
+					color: $orange
+				&:hover::after, &:focus::after,
+				&:hover::before, &:focus::before
+					opacity: 1
+					transform: translateY(0)
+					-moz-transform: translateY(0)
+					-webkit-transform: translateY(0)
+					-o-transform: translateY(0)
+
+.main
+	margin-top: 68px
+.top-banner
+	background-attachment: fixed
+	background-repeat: no-repeat
+	height: 360px
+	background-image: url('../img/header.jpg')
+	background-size: auto 500px
+	max-width: 1900px
+	margin: 0 auto
+	.container
+		position: relative
+	.form-place
+		position: absolute
+		top: 0
+		right: 15px
+		background: #ff8103
+		width: 387px
+		height: 360px
+		padding: 42px 45px
+		opacity: 0.75
+	form
+		position: absolute
+		top: 52px
+		right: 56px
+		width: 300px
+		font-family: 'robotoregular'
+		h1
+			margin-bottom: 25px
+		input, textarea
+			background: $bg-brown
+			border: 2px solid transparent
+			margin-bottom: 3px
+			opacity: 1
+			color: #fff
+			font-size: 13px
+			padding-left: 15px
+			&:focus
+				border: 2px solid #fff
+		.placeholder
+			color: #fff
+		input
+			height: 39px
+			&::-webkit-input-placeholder,
+				color: #fff
+			&::-moz-placeholder
+				color: #fff
+			&:-moz-placeholder
+				color: #fff
+			&:-ms-input-placeholder
+				color: #fff
+		textarea
+			height: 55px
+			&::-webkit-input-placeholder,
+				color: #fff
+			&::-moz-placeholder
+				color: #fff
+			&:-moz-placeholder
+				color: #fff
+			&:-ms-input-placeholder
+				color: #fff
+		a, a:hover
+			color: $black-head
+			display: block
+			font-size: 12px
+			margin-bottom: 15px
+
+.our-products
+	margin-top: 60px
+	margin-bottom: 45px
+	.products-wrap
+		width: 932px
+		margin: 0 auto
+	.product-gallery
+		margin-top: 31px
+		a
+			text-decoration: none
+		.thumbnail
+			border: none
+			img
+				border: 1px solid transparent
+			.caption
+				padding: 9px 17px
+			h5
+				margin-top: 15px
+				margin-bottom: 5px
+			p
+				line-height: 17px
+				color: $gray
+			img
+				+border-radius(50%)
+				background: #ddd
+				+transition(all 0.3s ease-out)
+				&:hover, &.active
+					border: 1px solid $orange
+					+border-radius(0)
+					background: #fff
+
+.catalog-wrap
+	position: relative
+	display: none
+	margin-top: -45px
+	margin-bottom: 25px
+	.arrow-close
+		width: 30px
+		height: 30px
+		background: transparent
+		border: none
+		position: absolute
+		bottom: -35px
+		left: -15px
+		margin-left: 50%
+		cursor: pointer
+		z-index: 100
+		&:before
+			content: '' 
+			position: absolute
+			bottom: 7px
+			left: 0
+			border: 15px solid transparent
+			border-bottom: 13px solid #000
+		&:after
+			content: '' 
+			position: absolute
+			bottom: 0
+			left: 0
+			border: 15px solid transparent
+			border-bottom: 13px solid #fff
+	.catalog
+		position: relative
+		overflow: hidden
+		.arrow
+			position: absolute
+			top: 0
+			z-index: 100
+			&:before
+				content: '' 
+				position: absolute
+				top: 20px
+				border: 28px solid transparent
+				border-top: 28px solid $orange
+			&:after
+				content: '' 
+				position: absolute
+				top: 18px
+				border: 28px solid transparent
+				border-top: 28px solid #fff
+		.categories-wrap
+			background: transparent
+			border-top: 1px solid $orange
+			padding-top: 10px
+			.order-banner
+				float: left
+				background: url('../img/order-banner.jpg') no-repeat
+				background-size: 100% 100%
+				border: 1px solid #ddd
+				height: 325px
+				width: 263px
+				padding: 10px
+				h4
+					color: $orange
+					text-transform: none
+					font-size: 20px
+					margin-top: 115px
+					margin-bottom: 12px
+					&.white
+						text-transform: uppercase
+						margin-top: 0
+						margin-bottom: 3px
+				.btn
+					padding: 8px 25px
+					margin-top: 32px
+			.product-wrap
+				margin-bottom: 25px
+				width: 263px
+				height: 325px
+				float: left
+				margin-right: 23px
+				position: relative
+				&:nth-child(4n+4)
+					margin-right: 0
+			.orange-hr
+				position: absolute
+				bottom: 0
+				left: 0
+				margin: 0
+				border-top: 3px solid $orange
+				width: 100%
+			.product-item
+				height: 325px
+				padding: 15px 10px
+				+border-radius(0)
+				margin-bottom: 0
+				text-align: center
+				img
+					margin-bottom: 20px
+					height: 195px
+				.product-name
+					font-family: 'roboto_cnregular'
+					font-size: 16px
+					line-height: 20px
+					height: 43px
+					overflow-y: hidden
+				.product-price
+					color: $orange
+					font-size: 16px
+					font-family: 'roboto_cnbold'
+					margin-bottom: 20px
+					span
+						font-size: 22px
+				.btn-orange
+					+border-radius(0)
+					position: absolute
+					bottom: 0
+					left: 0
+					z-index: 100
+					display: none
+					padding: 8px
+				&:hover
+					+box-shadow(inset 0 0 0 3px #ddd)
+
+.without-mess
+	background: url('../img/without-mess.jpg') 50% 50% no-repeat
+	margin-bottom: 48px
+	min-height: 527px
+	position: relative
+	padding-top: 30px
+	&:before
+		content: '' 
+		position: absolute
+		top: 0
+		left: -25px
+		margin-left: 50%
+		border: 25px solid transparent
+		border-top: 25px solid #fff
+	h1
+		margin-top: 32px
+	.how
+		margin-top: 43px
+		width: 100%
+		.border-rhombus
+			display: inline-block
+			height: 200px
+			width: 200px
+			margin: 44px 35px 44px 44px
+			border: 2px solid #fff
+			+transform(rotate(45deg))
+			position: relative
+			top: 0
+			+transition(all 0.2s ease-out)
+			&:hover, &.active
+				top: 23px
+				.inner-rhombus
+					bottom: 32px
+					right: 32px
+			.inner-rhombus
+				position: relative
+				bottom: 0
+				right: 0
+				height: 200px
+				width: 200px
+				margin: 14px
+				background: #fff
+				+transition(all 0.2s ease-out)
+				.thumbnail
+					+transform(rotate(-45deg))
+					border: none
+					background: transparent
+					width: 140px
+					height: 140px
+					position: absolute
+					top: 30px
+					left: 30px
+					padding: 0
+					margin: 0
+					.caption
+						width: 135px
+						margin-top: 13px
+						h6
+							font-family: 'roboto_cnbold'
+							line-height: 18px
+							span
+								margin-right: 3px
+								color: $orange
+
+.service-details
+	.tab-pane.active
+		margin-top: -30px
+		padding-bottom: 44px
+		margin-bottom: 37px
+		+box-shadow(0 4px 5px 0 #ddd)
+		.details
+			text-align: center
+			margin: 0 auto
+			width: 800px
+			.btn-close
+				background: transparent
+				border: none
+				margin-bottom: 20px
+				&:focus
+					outline: none
+				&:after
+					border-top: 1px solid $orange
+				&:before
+					border-top: 1px solid $orange
+
+.contacts
+	margin-bottom: 35px
+	height: 235px
+	.map
+		width: 677px
+		height: 235px
+		margin-right: 50px
+		border-top: 2px solid $orange
+		&:hover
+			+box-shadow(0 -2px 0 $orange)
+	.contacts-info
+		h1
+			margin-bottom: 33px
+			margin-top: 8px
+		p
+			line-height: 24px
+			margin-bottom: 20px
+		.btn-black
+			padding: 8px 14px
+			border-bottom: 2px solid #626262
+
+.footer
+	p
+		font-size: 12px
+		margin-top: 4px
+	.web-logo
+		margin-top: -4px
+
+//Modal windows
+.modal
+	.modal-dialog
+		position: relative
+		margin: 100px auto 0
+		width: 593px
+		.modal-content
+			background: url('../img/pattern.png')
+			.modal-body
+				padding: 20px 24px
+		.btn-close
+			background: #000
+			opacity: 0.6
+			position: absolute
+			top: -1px
+			right: -50px
+			width: 50px
+			height: 50px
+			&:after
+				bottom: 24px
+				left: 3px
+				width: 45px
+				border-top: 2px solid #fff
+			&:before
+				bottom: 24px
+				left: 3px
+				width: 45px
+				border-top: 2px solid #fff
+		h2
+			margin: 25px 0 7px
+	form
+		width: 320px
+		margin: 25px auto 35px
+		.placeholder
+			color: $black
+		a
+			display: block
+			margin-top: -4px
+			color: #235d98
+		input
+			height: 40px
+			border: 1px solid #ddd
+			font-family: 'robotoregular'
+			&::-webkit-input-placeholder,
+				color: $black
+			&::-moz-placeholder
+				color: $black
+			&:-moz-placeholder
+				color: $black
+			&:-ms-input-placeholder
+				color: $black
+		textarea
+			height: 55px
+			border: 1px solid #ddd
+			&::-webkit-input-placeholder,
+				color: $black
+			&::-moz-placeholder
+				color: $black
+			&:-moz-placeholder
+				color: $black
+			&:-ms-input-placeholder
+				color: $black
+		.btn-orange
+			border-bottom: 3px solid #cd660b
+			margin-top: 20px
+			padding-bottom: 7px
+
+.modal-buy, .modal-by-gross, .modal-order
+	form
+		margin-bottom: 27px
+		.form-group
+			margin-bottom: 10px
+	h2
+		padding-bottom: 20px
+		border-bottom: 2px solid $orange
+		margin-bottom: 30px
+	h4
+		font-family: 'roboto_cnregular'
+		text-transform: none
+		margin-top: 28px
+	h3
+		margin-top: 20px
+		margin-bottom: 10px
+.modal-order
+	form
+		margin-bottom: 48px
+		h5
+			margin-top: -6px
+			margin-bottom: 9px
+		textarea
+			height: 70px
+.modal-thankyou-1, .modal-thankyou-2
+	img
+		margin-bottom: 25px
+	h3
+		text-transform: none
+		margin-bottom: 20px
+		&.green
+			color: #608445
