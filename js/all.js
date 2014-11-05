@@ -17,7 +17,7 @@ $(document).ready(function(){
 		}
 	});
 	$('.btn-scroll, .web-logo').click(function(){
-		$('html, body').animate({scrollTop:0}, 500, 'easeInOutQuad');
+		$('html, body').animate({scrollTop:0}, 2000, 'easeInOutQuad');
 		
 	})
 
