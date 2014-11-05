@@ -16,9 +16,9 @@ $(document).ready(function(){
 			$('.btn-scroll').css('display', 'none');
 		}
 	});
-	$('.btn-scroll, .web-logo').click(function(){
-		$('html, body').animate({scrollTop:0}, 2000, 'easeInOutQuad');
-		
+
+	$('.btn-scroll, .header-logo').click(function(){
+		$('html, body').animate({scrollTop:0}, 700, 'easeInOutQuad');
 	})
 
 //Phone rotate
