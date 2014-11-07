@@ -122,7 +122,11 @@ body .container { width: 1162px; max-width: 1162px; min-width: 1162px; }
 .catalog-wrap .catalog .arrow:before { content: ""; position: absolute; top: 20px; border: 28px solid transparent; border-top: 28px solid #ff8103; }
 .catalog-wrap .catalog .arrow:after { content: ""; position: absolute; top: 18px; border: 28px solid transparent; border-top: 28px solid white; }
 .catalog-wrap .catalog .categories-wrap { background: transparent; border-top: 1px solid #ff8103; padding-top: 10px; }
-.catalog-wrap .catalog .categories-wrap .order-banner { float: left; background: url("../img/order-banner.jpg") no-repeat; background-size: 100% 100%; border: 1px solid #efefef; height: 325px; width: 265px; padding: 10px; }
+.catalog-wrap .catalog .categories-wrap .order-banner { float: left; background-size: 100% 100%; border: 1px solid #efefef; height: 325px; width: 265px; padding: 10px; }
+.catalog-wrap .catalog .categories-wrap .order-banner.metchiki-order { background: url("../img/banner-metchiki.jpg") no-repeat; }
+.catalog-wrap .catalog .categories-wrap .order-banner.plashki-order { background: url("../img/banner-plashki.jpg") no-repeat; }
+.catalog-wrap .catalog .categories-wrap .order-banner.frezy-order { background: url("../img/banner-frezy.jpg") no-repeat; }
+.catalog-wrap .catalog .categories-wrap .order-banner.sverla-order { background: url("../img/banner-sverla.jpg") no-repeat; }
 .catalog-wrap .catalog .categories-wrap .order-banner h4 { color: #ff8103; text-transform: none; font-size: 20px; margin-top: 115px; margin-bottom: 12px; }
 .catalog-wrap .catalog .categories-wrap .order-banner h4.white { text-transform: uppercase; margin-top: 0; margin-bottom: 3px; }
 .catalog-wrap .catalog .categories-wrap .order-banner .btn { padding: 8px 25px; margin-top: 32px; }
