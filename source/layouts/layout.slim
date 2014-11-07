@@ -3,7 +3,9 @@ doctype html
 html
 	head
 		meta charset='utf-8'
-		meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'
+		<!--[if IE]>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<![endif]-->
 
 		meta name='viewport' content='width=1132, height=device-height, initial-scale=1.0, user-scalable=0'
 
@@ -24,11 +26,12 @@ html
 		header class="header"
 			div class="container"
 				a href="#" class="pull-left header-logo"
-					img src="img/logo.jpg"
+					img src="img/logo.jpg" alt="..."
 				div class="header-navigation"
 					button class="btn pull-right" data-toggle="modal" data-target="#modal-callback"
 						| Перезвоните мне
-					p class="phone pull-right" 050 55 55 555
+					p class="phone pull-right"
+						| +7 (812) 716-84-80
 					nav class="header-menu"
 						a href="#1" data-ref="coda-slider" Метчики
 						a href="#2" data-ref="coda-slider" Плашки
@@ -49,7 +52,7 @@ html
 			hr
 			div class="container"
 				a href="http://danta.com.ua" target="blank" class="web-logo pull-right"
-					img src="img/web-logo.png"
+					img src="img/web-logo.png" alt="..."
 				p class="text-muted" Copyright 2014 MetallGears
 				br
 		== javascript_include_tag 'jquery-1.11.1.min', 'bootstrap.min', 'jquery.rotate', 'jquery.placeholder', 'vendor/coda-slider/jquery.coda-slider-3.0', 'jquery.easing.1.3', 'vendor/inputmask/jquery.inputmask', 'vendor/inputmask/ext/jquery.inputmask.numeric.extensions', 'wow', 'skrollr', 'all'
